@@ -3,8 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My Playlist Room</title>
-<meta name="description" content="기분에 맞는 노래를 골라 듣는 플레이리스트 홈페이지">
+
+<!-- ===== 기본 SEO ===== -->
+<title>My Playlist Room · 기분별 플레이리스트 추천</title>
+<meta name="description" content="비 오는 날, 새벽 드라이브, 집중, 카페, 운동까지. 지금 기분에 딱 맞는 노래를 분위기별로 모아 듣는 무료 플레이리스트 홈페이지입니다.">
+<meta name="keywords" content="플레이리스트,기분별 음악,노래 추천,비 오는 날 노래,새벽 드라이브,집중 음악,카페 음악,운동 노래,playlist">
+<meta name="author" content="My Playlist Room">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b0c1a">
+<link rel="canonical" href="https://junseo117.github.io/">
+<meta name="format-detection" content="telephone=no">
+
+<!-- ===== 소셜 공유 (Open Graph) ===== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="My Playlist Room">
+<meta property="og:title" content="My Playlist Room · 기분별 플레이리스트 추천">
+<meta property="og:description" content="지금 기분에 딱 맞는 노래를 분위기별로 모아 듣는 무료 플레이리스트 홈페이지.">
+<meta property="og:url" content="https://junseo117.github.io/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://junseo117.github.io/og-image.svg">
+<meta property="og:image:alt" content="My Playlist Room 대표 이미지">
+
+<!-- ===== 트위터 카드 ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Playlist Room · 기분별 플레이리스트 추천">
+<meta name="twitter:description" content="지금 기분에 딱 맞는 노래를 분위기별로 모아 듣는 무료 플레이리스트 홈페이지.">
+<meta name="twitter:image" content="https://junseo117.github.io/og-image.svg">
+
+<!-- ===== 파비콘 (인라인 이모지 SVG) ===== -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E">
+
+<!-- ===== 구조화 데이터 (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "My Playlist Room",
+  "alternateName": "기분별 플레이리스트",
+  "url": "https://junseo117.github.io/",
+  "inLanguage": "ko-KR",
+  "description": "지금 기분에 딱 맞는 노래를 분위기별로 모아 듣는 무료 플레이리스트 홈페이지.",
+  "publisher": {
+    "@type": "Person",
+    "name": "My Playlist Room"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "My Playlist Room은 어떤 사이트인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "비 오는 날, 새벽 드라이브, 집중, 카페, 운동 등 상황과 기분에 맞춰 노래를 분위기별로 모아 듣는 무료 플레이리스트 홈페이지입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "노래는 어떻게 재생하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "곡의 '듣기' 버튼을 누르면 유튜브 등 외부 음악 사이트로 연결되어 재생됩니다. 사이트 자체는 곡의 제목과 가수 정보만 표기합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "찜한 곡은 어디에 저장되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "하트를 누른 곡은 사용 중인 브라우저에 로컬로 저장됩니다. 별도 로그인이나 회원가입 없이 바로 이용할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "이용료가 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "무료입니다. 회원가입 없이 누구나 바로 플레이리스트를 둘러보고 들을 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root{
     --bg:#0b0c1a;--bg2:#12142a;--card:#171a33;--line:#ffffff1f;
@@ -141,6 +225,21 @@
   .about p{color:var(--muted);margin-top:8px}
   .links{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
 
+  /* FAQ */
+  .faq{display:grid;gap:12px}
+  .faq details{border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--accent2);font-size:22px;transition:.2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details[open] summary{color:var(--accent2)}
+  .faq .ans{padding:0 20px 18px;color:var(--muted)}
+
+  /* JS 전 정적 콘텐츠 / 크롤러용 (스크린리더엔 노출, 화면엔 숨김) */
+  .seo-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  /* noscript 안내 */
+  .ns-note{margin:20px 0;padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--muted)}
+
   footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:30px}
 
   /* 토스트 */
@@ -156,7 +255,7 @@
     .links{justify-content:center}
   }
   @media (max-width:520px){
-    nav ul li:nth-child(3){display:none}
+    nav ul li:nth-child(2){display:none}
     .track{grid-template-columns:22px 1fr auto}
     .track .play{display:none}
   }
@@ -172,6 +271,7 @@
     <ul>
       <li><a href="#lists">플레이리스트</a></li>
       <li><a href="#favs">찜한 곡</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#about">소개</a></li>
     </ul>
   </div>
@@ -180,9 +280,9 @@
 <main class="wrap" id="top">
   <header class="hero">
     <div>
-      <span class="tag" id="heroTag"></span>
-      <h1 id="heroTitle"></h1>
-      <p class="lead" id="heroLead"></p>
+      <span class="tag" id="heroTag">🎵 분위기별 플레이리스트</span>
+      <h1 id="heroTitle">오늘의 기분에<br><span>딱 맞는 노래</span></h1>
+      <p class="lead" id="heroLead">비 오는 날, 새벽 드라이브, 집중이 필요한 순간까지. 상황마다 아껴 듣는 노래를 분위기별로 골라 모아뒀어요. 기분을 고르면 거기에 맞는 플레이리스트를 바로 들을 수 있어요.</p>
       <div class="cta">
         <a class="btn primary" href="#lists">플레이리스트 둘러보기</a>
         <button class="btn ghost" id="ctaRandom">🎲 아무 노래나 틀어줘</button>
@@ -210,7 +310,47 @@
       <div class="chips" id="chips"></div>
       <label class="search"><input id="q" type="search" placeholder="곡 · 가수 검색" autocomplete="off"></label>
     </div>
+    <noscript>
+      <p class="ns-note">자바스크립트를 켜면 플레이리스트를 기분별로 필터링하고 곡을 바로 재생할 수 있어요. 아래는 전체 플레이리스트 목록입니다.</p>
+    </noscript>
     <div class="grid" id="grid"></div>
+
+    <!-- 크롤러 · 생성형 AI 검색을 위한 정적 콘텐츠 (화면에는 숨김) -->
+    <div class="seo-only">
+      <h3>전체 플레이리스트 목록</h3>
+      <ul>
+        <li>☔ 비 오는 날 — 창밖 빗소리랑 같이 듣는 노래: 비도 오고 그래서(헤이즈), 비(폴킴), Set Fire to the Rain(Adele), Riders on the Storm(The Doors), Rain(태연)</li>
+        <li>🌙 새벽 드라이브 — 텅 빈 도로를 달릴 때: Midnight City(M83), Nightcall(Kavinsky), Sunset Lover(Petit Biscuit), 밤편지(아이유), Redbone(Childish Gambino)</li>
+        <li>📚 집중 모드 — 가사 없이 몰입하고 싶을 때: Experience(Ludovico Einaudi), Time(Hans Zimmer), River Flows in You(Yiruma), Comptine d'un autre été(Yann Tiersen), Weightless(Marconi Union)</li>
+        <li>☕ 카페 감성 — 느긋한 오후, 따뜻한 커피 한 잔: Better Together(Jack Johnson), Banana Pancakes(Jack Johnson), Sunday Morning(Maroon 5), Fly Me to the Moon(Frank Sinatra), Cheek to Cheek(Ella Fitzgerald & Louis Armstrong)</li>
+        <li>🔥 운동할 때 — 심박수 올려주는 텐션 업 곡: Eye of the Tiger(Survivor), Lose Yourself(Eminem), Can't Hold Us(Macklemore & Ryan Lewis), Don't Stop Me Now(Queen), Stronger(Kanye West)</li>
+        <li>💧 새벽 감성 충전 — 괜히 센치해지는 밤에: Someone Like You(Adele), Fix You(Coldplay), 나의 옛날이야기(아이유), 거리에서(성시경), Skinny Love(Bon Iver)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="sec-head">
+      <div><h2>자주 묻는 질문</h2><p>처음 오셨다면 아래를 확인해 보세요.</p></div>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>My Playlist Room은 어떤 사이트인가요?</summary>
+        <div class="ans">비 오는 날, 새벽 드라이브, 집중, 카페, 운동 등 상황과 기분에 맞춰 노래를 분위기별로 모아 듣는 무료 플레이리스트 홈페이지입니다.</div>
+      </details>
+      <details>
+        <summary>노래는 어떻게 재생하나요?</summary>
+        <div class="ans">곡의 '듣기' 버튼을 누르면 유튜브 등 외부 음악 사이트로 연결되어 재생됩니다. 이 사이트 자체는 곡의 제목과 가수 정보만 표기합니다.</div>
+      </details>
+      <details>
+        <summary>찜한 곡은 어디에 저장되나요?</summary>
+        <div class="ans">하트를 누른 곡은 사용 중인 브라우저에 로컬로 저장됩니다. 별도 로그인이나 회원가입 없이 바로 이용할 수 있어요.</div>
+      </details>
+      <details>
+        <summary>이용료가 있나요?</summary>
+        <div class="ans">무료입니다. 회원가입 없이 누구나 바로 플레이리스트를 둘러보고 들을 수 있습니다.</div>
+      </details>
+    </div>
   </section>
 
   <section id="favs">
