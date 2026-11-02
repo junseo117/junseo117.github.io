@@ -1,0 +1,29 @@
+# Netlify 배포 설정 — My Playlist Room
+# 현재는 빌드 없는 순수 정적 사이트(HTML/CSS/브라우저 JS/이미지).
+# 기존 GitHub Pages 배포(루트 게시)와 공존하도록, 파일을 옮기지 않고 루트를 그대로 공개한다.
+
+[build]
+  # 빌드 단계 없음(정적 파일 그대로 게시). 새 프레임워크·번들러를 도입하지 않는다.
+  command = ""
+  # 공개(publish) 폴더: public/ (공개 파일만 포함).
+  # 루트 원본은 GitHub Pages 보존을 위해 그대로 둔다. docs/·.kiro/·netlify/ 는 공개에서 제외됨.
+  publish = "public"
+  # 서버리스 함수 폴더(공개 폴더와 분리). 함수 코드는 public/ 에 복사하지 않는다.
+  functions = "netlify/functions"
+
+# 공개 출력에서 제외할 비공개 경로.
+# .git, node_modules 등은 Netlify가 기본 제외하지만, 명시적으로 개인 기록/설정도 무시한다.
+# (파일 기반 제외는 .gitignore / 아래 환경변수 IGNORE 와 함께 적용)
+
+[build.environment]
+  # 민감/비공개 디렉터리를 게시 대상에서 제외
+  # (Netlify는 .git, node_modules를 자동 제외. 아래는 보강용 문서화 값)
+  NODE_VERSION = "20"
+
+# 보안 헤더(정적 자산에 기본 적용)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -1,0 +1,23 @@
+# 의존성/빌드 산출물
+node_modules/
+dist/
+.cache/
+
+# 환경변수·비밀 (절대 공개 금지)
+.env
+.env.*
+*.local
+
+# 에디터/에이전트 개인 기록 (공개 출력 제외)
+.kiro/
+
+# 개인 기획 기록 (공개 저장소에 올리지 않음)
+docs/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Netlify 로컬 산출물
+.netlify/
