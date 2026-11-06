@@ -12,13 +12,17 @@
   functions = "netlify/functions"
 
 # 공개 출력에서 제외할 비공개 경로.
-# .git, node_modules 등은 Netlify가 기본 제외하지만, 명시적으로 개인 기록/설정도 무시한다.
-# (파일 기반 제외는 .gitignore / 아래 환경변수 IGNORE 와 함께 적용)
+# .git, node_modules 등은 Netlify가 기본 제외한다. 개인 기록(.kiro)·기획 문서(docs)는 .gitignore로 제외.
 
 [build.environment]
-  # 민감/비공개 디렉터리를 게시 대상에서 제외
-  # (Netlify는 .git, node_modules를 자동 제외. 아래는 보강용 문서화 값)
   NODE_VERSION = "20"
+
+# 같은 사이트 경로 /api/* 를 서버리스 함수로 연결한다.
+# 예: 브라우저가 /api/list-suggestions 를 호출하면 list-suggestions 함수가 실행됨.
+[[redirects]]
+  from = "/api/:name"
+  to = "/.netlify/functions/:name"
+  status = 200
 
 # 보안 헤더(정적 자산에 기본 적용)
 [[headers]]

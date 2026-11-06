@@ -6,6 +6,7 @@ dist/
 # 환경변수·비밀 (절대 공개 금지)
 .env
 .env.*
+!.env.example
 *.local
 
 # 에디터/에이전트 개인 기록 (공개 출력 제외)
@@ -21,3 +22,6 @@ desktop.ini
 
 # Netlify 로컬 산출물
 .netlify/
+
+# 로컬 전용 개발 서버 (배포/공개 제외)
+dev-server.js
